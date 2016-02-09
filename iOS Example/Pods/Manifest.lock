@@ -1,0 +1,14 @@
+PODS:
+  - RangeSliderView (0.1.0)
+
+DEPENDENCIES:
+  - RangeSliderView (from `../`)
+
+EXTERNAL SOURCES:
+  RangeSliderView:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  RangeSliderView: 15be2a7221284d0227de65a5ed7630b43af8a551
+
+COCOAPODS: 0.39.0

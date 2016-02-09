@@ -1,0 +1,20 @@
+PODS:
+  - Nimble (3.1.0)
+  - Quick (0.9.0)
+  - RangeSliderView (0.1.0)
+
+DEPENDENCIES:
+  - Nimble
+  - Quick
+  - RangeSliderView (from `../`)
+
+EXTERNAL SOURCES:
+  RangeSliderView:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Nimble: 79d40f4d69d47314229bbabacaa02b8838c779b9
+  Quick: 332eb1da73125a2106dd637424c803f2ae97e4a9
+  RangeSliderView: 15be2a7221284d0227de65a5ed7630b43af8a551
+
+COCOAPODS: 0.39.0

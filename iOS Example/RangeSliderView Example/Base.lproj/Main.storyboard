@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="RangeSliderView_iOS_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mhB-ew-0qx" customClass="RangeSliderView" customModule="RangeSliderView">
+                                <rect key="frame" x="25" y="40" width="550" height="86"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="86" id="rK1-IE-OEA"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="minimumValue">
+                                        <integer key="value" value="0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="maximumValue">
+                                        <integer key="value" value="100"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="minimumSelectedValue">
+                                        <integer key="value" value="0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="maximumSelectedValue">
+                                        <integer key="value" value="100"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="sliderKnobColor">
+                                        <color key="value" red="1" green="0.23819875456354822" blue="0.37526057981915084" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="sliderKnobHighligtedColor">
+                                        <color key="value" red="0.37921691949719905" green="1" blue="0.42430418948103021" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="sliderKnobBorderColor">
+                                        <color key="value" red="0.4918434676665876" green="0.35567030617852924" blue="0.70588235294117652" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="sliderProgressFilledColor">
+                                        <color key="value" red="0.99277858973482946" green="0.99607843137254903" blue="0.36452240332778124" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="sliderProgressEmptyColor">
+                                        <color key="value" red="0.6588235294117647" green="0.23445542467729216" blue="0.39661218359911504" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="valueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="D3X-wi-TOv"/>
+                                </connections>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c3G-Kg-wWe">
+                                <rect key="frame" x="25" y="128" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zg9-cE-LKK">
+                                <rect key="frame" x="533" y="128" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="mhB-ew-0qx" secondAttribute="trailing" constant="5" id="4pM-SU-iuZ"/>
+                            <constraint firstItem="mhB-ew-0qx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="5" id="5nh-jp-2dZ"/>
+                            <constraint firstItem="mhB-ew-0qx" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="Aug-iz-bXC"/>
+                            <constraint firstItem="zg9-cE-LKK" firstAttribute="top" secondItem="mhB-ew-0qx" secondAttribute="bottom" constant="2" id="VPM-BP-uXR"/>
+                            <constraint firstItem="c3G-Kg-wWe" firstAttribute="leading" secondItem="mhB-ew-0qx" secondAttribute="leading" id="XMK-nP-5rP"/>
+                            <constraint firstItem="c3G-Kg-wWe" firstAttribute="top" secondItem="mhB-ew-0qx" secondAttribute="bottom" constant="2" id="YiY-Vn-gnK"/>
+                            <constraint firstItem="zg9-cE-LKK" firstAttribute="trailing" secondItem="mhB-ew-0qx" secondAttribute="trailing" id="fyZ-Y6-8hn"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="mhB-ew-0qx" secondAttribute="trailing" constant="5" id="kZ1-1O-BEo"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="kZ1-1O-BEo"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="maximumValueLabel" destination="zg9-cE-LKK" id="DuL-oz-VH0"/>
+                        <outlet property="minimumValueLabel" destination="c3G-Kg-wWe" id="2bE-IS-k83"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="370" y="347"/>
+        </scene>
+    </scenes>
+</document>
