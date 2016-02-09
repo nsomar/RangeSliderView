@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
   s.summary          = "RangeSliderView provide an easy to use range slider view."
 
   s.description      = <<-DESC
-RangeSliderView is a NSControl/UIContrl subclass that provides an easy control to select a range.
+RangeSliderView is a NSControl/NSControl/UIControl subclass that provides an easy control to select a range.
                        DESC
 
   s.homepage         = "https://github.com/oarrabi/RangeSliderView"

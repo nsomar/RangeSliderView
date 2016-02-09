@@ -11,12 +11,12 @@
 <br/>
 </p>
 
-RangeSliderView is a NSControl/UIContrl subclass that provides an easy control to select a range.
+RangeSliderView is a NSControl/UIControl subclass that provides an easy control to select a range.
 
 ## Features
 
 - Cross platform; works on the iOS and MacOSX.
-- Customizable Knob and Progress colors.
+- Customisable Knob and Progress colors.
 - `@IBDesignable` and `@IBInspectable`
 
 ## Installation
@@ -37,7 +37,7 @@ You can add RangeSliderView in your view using Interface builder by dragging a v
 
 You can add an action using normal target action.
 
-`RangeSliderView` contain inspectable properties, to change it's properties, edit the inspectables values in Interface Builder.
+`RangeSliderView` contain inspectable properties, to change it's properties, edit the inspectable values in Interface Builder.
 
 ![Inspectable](http://i.imgur.com/UmI1kPg.png)
 
@@ -71,19 +71,19 @@ rangeSliderView.selectedValuesChanged = { min, max in
 }
 ```
 
-### Costumization
+### Customisation
 
-The following are costumizable properties of the `RangeSliderView`:
+The following are customisable properties of the `RangeSliderView`:
 
 `sliderKnobColor` Sets the Knob background color (Defaults to white)
 
-`sliderKnobHighligtedColor` Sets the Knob highlight color (Defaults to light gray)
+`sliderKnobHighligtedColor` Sets the Knob highlight color (Defaults to light grey)
 
-`sliderKnobBorderColor` Sets the Knob border color (Defaults to gray)
+`sliderKnobBorderColor` Sets the Knob border color (Defaults to grey)
 
 `sliderProgressFilledColor` Sets the slider progress filled color (Defaults to blue)
 
-`sliderProgressEmptyColor` Sets the slider progress empty color (Defaults to gray)
+`sliderProgressEmptyColor` Sets the slider progress empty color (Defaults to grey)
 
 ## screenshots
 
