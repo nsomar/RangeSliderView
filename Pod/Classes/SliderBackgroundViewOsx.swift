@@ -20,8 +20,8 @@
       }
     }
     
-    override func drawRect(dirtyRect: CGRect) {
-      super.drawRect(dirtyRect)
+    override func draw(_ dirtyRect: CGRect) {
+      super.draw(dirtyRect)
       SliderBackgroundViewImpl.drawRect(forView: self, dirtyRect: dirtyRect)
     }
     

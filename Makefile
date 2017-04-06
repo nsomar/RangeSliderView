@@ -18,4 +18,4 @@ pod: pod-mac pod-ios
 test-pod:
 	pod lib lint
 
-test: test-app build-mac build-ios test-pod
+test: test-app test-pod

@@ -1,11 +1,11 @@
 source 'https://github.com/CocoaPods/Specs.git'
 use_frameworks!
 
-target 'RangeSliderView_Mac_Example', :exclusive => true do
+target 'RangeSliderView_Mac_Example' do
   pod 'RangeSliderView', :path => '../'
 end
 
-target 'RangeSliderView_Tests', :exclusive => true do
+target 'RangeSliderView_Tests' do
   pod 'RangeSliderView', :path => '../'
 
   pod 'Quick'

@@ -29,10 +29,10 @@
     
     var knobView: KnobView!
     
-    var knobMovementCallback : (CGRect -> ())?
+    var knobMovementCallback : ((CGRect) -> ())?
     
     init() {
-      super.init(frame: CGRectZero)
+      super.init(frame: CGRect.zero)
       commonInit()
     }
     
@@ -43,30 +43,30 @@
     
     func commonInit() {
       knobView = KnobView()
-      knobView.frame = CGRectMake(0, 0, 30, 30)
+      knobView.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
       
       self.addSubview(knobView)
     }
     
     
-    override func hitTest(point: CGPoint, withEvent event: UIEvent?) -> UIView? {
-      let isIn = CGRectContainsPoint(knobView.frame, point)
+    override func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
+      let isIn = knobView.frame.contains(point)
       return isIn ? knobView : nil
     }
     
     var draggingPoint: CGFloat = 0
     
-    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
-      let pointInKnob = touches.first!.locationInView(knobView)
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+      let pointInKnob = touches.first!.location(in: knobView)
       draggingPoint = RectUtil.pointHorizontalDistanceFromCenter(forRect: knobFrame, point: pointInKnob)
     }
     
-    override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
-      let point = touches.first!.locationInView(self)
+    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+      let point = touches.first!.location(in: self)
       
       knobFrame =
         knobFrame
-        |> RectUtil.updateRectHorizontalCenter(xCenter: point.x)
+        |> RectUtil.updateRectHorizontalCenter(point.x)
         |> RectUtil.moveRect(toLeft: draggingPoint)
       
       knobMovementCallback?(knobView.frame)

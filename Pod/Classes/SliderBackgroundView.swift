@@ -30,41 +30,41 @@ class SliderBackgroundViewImpl {
   static func drawRect(forView view: SliderBackground, dirtyRect: CGRect) {
     view.emptyColor.set()
     dirtyRect
-      |> RectUtil.setRectHeight(height: 3)
-      |> RectUtil.centerRectVertically(height: view.frame.height)
+      |> RectUtil.setRectHeight(3)
+      |> RectUtil.centerRectVertically(view.frame.height)
       |> drawCapsule
     
     view.fullColor.set()
     dirtyRect
-      |> RectUtil.applyBoundRange(boundRange: view.boundRange.boundByApplyingInset(-3))
-      |> RectUtil.setRectHeight(height: 3)
-      |> RectUtil.centerRectVertically(height: view.frame.height)
+      |> RectUtil.applyBoundRange(view.boundRange.boundByApplyingInset(-3))
+      |> RectUtil.setRectHeight(3)
+      |> RectUtil.centerRectVertically(view.frame.height)
       |> drawCapsule
   }
   
-  static func drawCapsule(frame frame: CGRect) {
-    let height = CGRectGetHeight(frame)
+  static func drawCapsule(frame: CGRect) {
+    let height = frame.height
     
     if (frame.width - height) < 4 { return }
     
     #if os(OSX)
-      let ovalPath = NSBezierPath(ovalInRect: NSMakeRect(frame.minX, frame.minY, height, frame.height))
+      let ovalPath = NSBezierPath(ovalIn: NSRect(x: frame.minX, y: frame.minY, width: height, height: frame.height))
     #else
-      let ovalPath = UIBezierPath(ovalInRect: CGRectMake(frame.minX, frame.minY, height, frame.height))
+      let ovalPath = UIBezierPath(ovalIn: CGRect(x: frame.minX, y: frame.minY, width: height, height: frame.height))
     #endif
     ovalPath.fill()
     
     #if os(OSX)
-      let oval2Path = NSBezierPath(ovalInRect: NSMakeRect(frame.minX + frame.width - height, frame.minY, height, frame.height))
+      let oval2Path = NSBezierPath(ovalIn: NSMakeRect(frame.minX + frame.width - height, frame.minY, height, frame.height))
     #else
-      let oval2Path = UIBezierPath(ovalInRect: CGRectMake(frame.minX + frame.width - height, frame.minY, height, frame.height))
+      let oval2Path = UIBezierPath(ovalIn: CGRect(x: frame.minX + frame.width - height, y: frame.minY, width: height, height: frame.height))
     #endif
     oval2Path.fill()
     
     #if os(OSX)
       let rectanglePath = NSBezierPath(rect: NSMakeRect(frame.minX + (height/2), frame.minY, frame.width - height, frame.height))
     #else
-      let rectanglePath = UIBezierPath(rect: CGRectMake(frame.minX + (height/2), frame.minY, frame.width - height, frame.height))
+      let rectanglePath = UIBezierPath(rect: CGRect(x: frame.minX + (height/2), y: frame.minY, width: frame.width - height, height: frame.height))
     #endif
     rectanglePath.fill()
   }

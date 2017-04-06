@@ -1,8 +1,8 @@
 {
   "name": "RangeSliderView",
   "version": "0.1.0",
-  "summary": "RangeSliderView provide an easy to use range slider view.",
-  "description": "RangeSliderView is a NSControl/UIContrl subclass that provides an easy control to select a range.",
+  "summary": "RangeSliderView provide an easy to use range selection view.",
+  "description": "RangeSliderView is a NSControl/NSControl/UIControl subclass that provides an easy control to select a range.",
   "homepage": "https://github.com/oarrabi/RangeSliderView",
   "screenshots": [
     "http://i.imgur.com/PkG5mJG.png",
