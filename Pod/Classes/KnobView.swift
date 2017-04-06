@@ -30,13 +30,16 @@ protocol Knob {
 class KnobViewImpl {
   
   static func drawKnob(forView view: Knob, dirtyRect: CGRect) {
-    var rect = CGRectMake(dirtyRect.minX, dirtyRect.minY, dirtyRect.width, dirtyRect.height)
-    rect = CGRectInset(rect, 1, 1)
+    var rect = CGRect(x: dirtyRect.minX,
+                      y: dirtyRect.minY,
+                      width: dirtyRect.width,
+                      height: dirtyRect.height)
+    rect = rect.insetBy(dx: 1, dy: 1)
     
     #if os(OSX)
-      let ovalPath = NSBezierPath(ovalInRect: rect)
+      let ovalPath = NSBezierPath(ovalIn: rect)
     #else
-      let ovalPath = UIBezierPath(ovalInRect: rect)
+      let ovalPath = UIBezierPath(ovalIn: rect)
     #endif
     
     view.fillColor.setFill()

@@ -41,27 +41,27 @@
     
     required init?(coder aDecoder: NSCoder) {
       super.init(coder: aDecoder)
-      backgroundColor = UIColor.clearColor()
+      backgroundColor = UIColor.clear
     }
     
     init () {
-      super.init(frame: CGRectZero)
-      backgroundColor = UIColor.clearColor()
+      super.init(frame: CGRect.zero)
+      backgroundColor = UIColor.clear
     }
     
-    override func drawRect(rect: CGRect) {
-      super.drawRect(rect)
+    override func draw(_ rect: CGRect) {
+      super.draw(rect)
       KnobViewImpl.drawKnob(forView: self, dirtyRect: rect)
     }
     
-    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
       isHighlighted = true
-      super.touchesBegan(touches, withEvent: event)
+      super.touchesBegan(touches, with: event)
     }
     
-    override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
       isHighlighted = false
-      super.touchesEnded(touches, withEvent: event)
+      super.touchesEnded(touches, with: event)
     }
     
   }

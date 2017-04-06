@@ -34,7 +34,7 @@
     /// Defaults to 0
     @IBInspectable public var minimumSelectedValue: Int {
       get {
-        return selectedRange.startIndex
+        return selectedRange.lowerBound
       }
       
       set {
@@ -48,7 +48,7 @@
     /// Defaults to 100
     @IBInspectable public var maximumSelectedValue: Int {
       get {
-        return selectedRange.endIndex
+        return selectedRange.upperBound
       }
       
       set {
@@ -67,13 +67,13 @@
     var minimumKnobView: SliderKnob = SliderKnobView()
     var maximumKnobView: SliderKnob = SliderKnobView()
     
-    var fullRange: Range<Int> = 0..<100 {
+    var fullRange: CountableRange<Int> = 0..<100 {
       didSet {
         updateKnobsPlacements()
       }
     }
     
-    var selectedRange: Range<Int> =  0..<100
+    var selectedRange: CountableRange<Int> =  0..<100
     
     public override init(frame frameRect: NSRect) {
       super.init(frame: frameRect)

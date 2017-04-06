@@ -9,6 +9,8 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  RangeSliderView: 15be2a7221284d0227de65a5ed7630b43af8a551
+  RangeSliderView: 670c42eaeeeabfda9f8f0d6e5d1aa49a8c2817dd
 
-COCOAPODS: 0.39.0
+PODFILE CHECKSUM: 77745638cffeca5714b92ae1be75f942bb45aa74
+
+COCOAPODS: 1.1.1

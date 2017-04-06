@@ -22,15 +22,15 @@
     
     required init?(coder aDecoder: NSCoder) {
       super.init(coder: aDecoder)
-      backgroundColor = UIColor.clearColor()
+      backgroundColor = UIColor.clear
     }
     
     init () {
-      super.init(frame: CGRectZero)
-      backgroundColor = UIColor.clearColor()
+      super.init(frame: CGRect.zero)
+      backgroundColor = UIColor.clear
     }
     
-    override func drawRect(dirtyRect: CGRect) {
+    override func draw(_ dirtyRect: CGRect) {
       SliderBackgroundViewImpl.drawRect(forView: self, dirtyRect: dirtyRect)
     }
     

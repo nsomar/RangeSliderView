@@ -39,19 +39,19 @@
       return isHighlighted ? backgroundHighligtedColor : backgroundNormalColor
     }
     
-    override func drawRect(dirtyRect: NSRect) {
-      super.drawRect(dirtyRect)
+    override func draw(_ dirtyRect: NSRect) {
+      super.draw(dirtyRect)
       KnobViewImpl.drawKnob(forView: self, dirtyRect: dirtyRect)
     }
     
-    override func mouseDown(theEvent: NSEvent) {
+    override func mouseDown(with theEvent: NSEvent) {
       isHighlighted = true
-      super.mouseDown(theEvent)
+      super.mouseDown(with: theEvent)
     }
-    
-    override func mouseUp(theEvent: NSEvent) {
+
+    override func mouseUp(with event: NSEvent) {
       isHighlighted = false
-      super.mouseUp(theEvent)
+      super.mouseUp(with: event)
     }
     
   }

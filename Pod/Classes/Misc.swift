@@ -7,17 +7,16 @@
 //
 
 import Foundation
+import Swift
 
-infix operator |> {
-associativity left
-precedence 100
-}
+infix operator |> : AdditionPrecedence
 
-func |> <T, W> (left: T?, right: T -> W?) -> W? {
+
+func |> <T, W> (left: T?, right: (T) -> W?) -> W? {
   guard let left = left else { return nil }
   return right(left)
 }
 
-func |> <T, W> (left: T, right: T -> W) -> W {
+func |> <T, W> (left: T, right: (T) -> W) -> W {
   return right(left)
 }
